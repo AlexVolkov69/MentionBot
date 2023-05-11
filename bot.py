@@ -27,19 +27,16 @@ async def start(event):
   await event.reply("𝗛𝗲𝗹𝗹𝗼 𝘄𝗲𝗹𝗰𝗼𝗺𝗲 𝘁𝗼 𝐌𝐄𝐍𝐓𝐈𝐎𝐍 𝐁𝐎𝐓🥀 \n\n ➪ 𝗧𝗵𝗶𝘀 𝗯𝗼𝘁 𝗰𝗮𝗻 𝘁𝗮𝗴 𝗠𝗲𝗺𝗯𝗲𝗿𝘀 𝗶𝗻 𝗴𝗿𝗼𝘂𝗽 𝗮𝗻𝗱 𝗰𝗵𝗮𝗻𝗻𝗲𝗹🌟 \n ➪ 𝗧𝗵𝗶𝘀 𝗯𝗼𝘁 𝗰𝗮𝗻 𝘁𝗮𝗴 10 𝗺𝗲𝗺𝗯𝗲𝗿𝘀 𝗮𝘁 𝗮 𝘁𝗶𝗺𝗲🥂 \n\n 𝗜𝗳 𝘂 𝗻𝗲𝗲𝗱 𝗵𝗲𝗹𝗽 𝗷𝘂𝘀𝘁 𝘁𝘆𝗽𝗲 /help 💫 /n/n 𝗸𝗲𝗲𝗽 𝘀𝘂𝗽𝗽𝗼𝗿𝘁𝗶𝗻𝗴 𝗹𝗼𝘃𝗲 𝘂 𝗮𝗹𝗹🌱",
                     buttons=(
                       [
-                        Button.url('➕ ADD ME TO YOUR GROUP', 'https://t.me/MEMBER_TAGERBOT?startgroup=true'),   
+                        Button.url('✚ 𝗔𝗗𝗗 𝗠𝗘 𝗣𝗜𝗥𝗢 ✚', 'https://t.me/mentionzbot?startgroup=true'),   
                       ]
                       [
-                         Button.url('📣 UPDATES', 'https://t.me/DeeCodeBots'), 
-                         Button.url('⭐SUPPORT', 'https://t.me/DeCodeSupport'), 
+                         Button.url('𝗨𝗽𝗱𝗮𝘁𝗲𝘀 🥂', 'https://t.me/AnnexBots'), 
+                         Button.url('𝗦𝘂𝗽𝗽𝗼𝗿𝘁 🥀', 'https://t.me/AnnexChat'), 
                       ], 
                       [
-                         Button.url('📣 UPDATES', 'https://t.me/DeeCodeBots'), 
-                         Button.url('⭐SUPPORT', 'https://t.me/DeCodeSupport'), 
-                      ], 
-                      [
-                        Button.url('➕ ADD ME TO YOUR GROUP', 'https://t.me/MEMBER_TAGERBOT?startgroup=true'),   
-                      ]
+                         Button.url('𝗬𝗼𝘂𝗧𝘂𝗯𝗲 💤', 'https://youtube.com/@AnnexTech'), 
+                         Button.url('𝗢𝘄𝗻𝗲𝗿 🌟', 'https://t.me/AboutAnnex'), 
+                      ] 
                    ), 
                     link_preview=False
                    )
