@@ -1,6 +1,6 @@
 {
   "logo":"https://te.legra.ph/file/2a84aa4a5209be9f129e3.jpg",
-  "name": "𝐌ᴇɴᴛɪᴏɴ ʙᴏᴛ",
+  "name": "𝐌ᴇɴᴛɪᴏɴ ʙᴏᴛ", 
   "description": "A 𝐌ᴇɴᴛɪᴏɴ ʙᴏᴛ for telegram Groups made by annex.",
   "env": {
     "TOKEN": {
