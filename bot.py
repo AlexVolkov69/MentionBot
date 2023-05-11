@@ -89,7 +89,7 @@ async def mentionall(event):
     usrnum = 0
     usrtxt = ""
     async for usr in client.iter_participants(event.chat_id):
-      usrnum += 1
+      usrnum += 1 
       usrtxt += f"[{usr.first_name}](tg://user?id={usr.id}) "
       if event.chat_id not in moment_worker:
         await event.respond("Stopped!")
