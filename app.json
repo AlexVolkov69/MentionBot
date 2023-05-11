@@ -1,7 +1,7 @@
 {
-  "logo":"https://telegra.ph/file/91003e77f23a2f2a03229.jpg",
-  "name": "MEMBER TAGGER",
-  "description": "A member tagger bot for telegram Groups.",
+  "logo":"https://te.legra.ph/file/2a84aa4a5209be9f129e3.jpg",
+  "name": "𝐌ᴇɴᴛɪᴏɴ ʙᴏᴛ",
+  "description": "A 𝐌ᴇɴᴛɪᴏɴ ʙᴏᴛ for telegram Groups made by annex.",
   "env": {
     "TOKEN": {
       "description": "Enter bot token Get It From @botfather.",
