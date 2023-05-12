@@ -48,26 +48,23 @@ async def help(event):
   await event.reply(helptext,
                     buttons=(
                       [
-                         Button.url('📣 UPDATES', 'https://t.me/DeeCodeBots'), 
-                         Button.url('⭐SUPPORT', 'https://t.me/DeCodeSupport'), 
-                      ], 
-                      [
-                        Button.url('➕ ADD ME TO YOUR GROUP', 'https://t.me/MEMBER_TAGERBOT?startgroup=true'),   
+                         Button.url('𝗨𝗽𝗱𝗮𝘁𝗲𝘀 🥂', 'https://t.me/AnnexBots'), 
+                         Button.url('𝗦𝘂𝗽𝗽𝗼𝗿𝘁 🥀', 'https://t.me/AnnexChat'), 
                       ]
                    ), 
                     link_preview=False
                    )
 
-#Wah bhaiya full ignorebazzi
+#AnnexOp
 
-#bsdk credit de dena verna maa chod dege
+#Dont forget to give credits i will pok ur girl friends
 
 #tag
 @client.on(events.NewMessage(pattern="^/tagall|/call|/tall|/all|#all|@all?(.*)"))
 async def mentionall(event):
   global moment_worker
   if event.is_private:
-    return await event.respond("Use This In Channel or Group!")
+    return await event.respond("𝗨𝘀𝗲 𝘁𝗵𝗶𝘀 𝗶𝗻 𝗰𝗵𝗮𝗻𝗻𝗲𝗹 𝗼𝗿 𝗴𝗿𝗼𝘂𝗽 🌱")
   
   admins = []
   async for admin in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
@@ -90,82 +87,41 @@ async def mentionall(event):
     
   if mode == "text_on_cmd":
     moment_worker.append(event.chat_id)
-    usrnum = 0
-    usrtxt = ""
-    async for usr in client.iter_participants(event.chat_id):
-      usrnum += 1 
+   usrtxt = ""
+   usrnum = 0
+   async for usr in client.iter_participants(event.chat_id):
       usrtxt += f"[{usr.first_name}](tg://user?id={usr.id}) "
+      usrnum += 1 
       if event.chat_id not in moment_worker:
         await event.respond("Stopped!")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, f"{usrtxt}\n\n{msg}")
         await asyncio.sleep(2)
-        usrnum = 0
         usrtxt = ""
+        usrnum = 0
+
         
   
   if mode == "text_on_reply":
     moment_worker.append(event.chat_id)
  
-    usrnum = 0
     usrtxt = ""
+    usrnum = 0
     async for usr in client.iter_participants(event.chat_id):
-      usrnum += 1
       usrtxt += f"[{usr.first_name}](tg://user?id={usr.id}) "
+      usrnum += 1
       if event.chat_id not in moment_worker:
         await event.respond("Stopped")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
         await asyncio.sleep(2)
-        usrnum = 0
         usrtxt = ""
+        usrnum = 0
 
 
-#telegraph 
-@client.on(events.NewMessage(pattern="^/t$"))
-async def telegraph(client, message):
-    replied = message.reply_to_message
-    if not replied:
-        await message.reply("Reply to a supported media file")
-        return
-    if not (
-        (replied.photo and replied.photo.file_size <= 5242880)
-        or (replied.animation and replied.animation.file_size <= 5242880)
-        or (
-            replied.video
-            and replied.video.file_name.endswith(".mp4")
-            and replied.video.file_size <= 5242880
-        )
-        or (
-            replied.document
-            and replied.document.file_name.endswith(
-                (".jpg", ".jpeg", ".png", ".gif", ".mp4"),
-            )
-            and replied.document.file_size <= 5242880
-        )
-    ):
-        await message.reply("Not supported!")
-        return
-    download_location = await client.download_media(
-        message=message.reply_to_message,
-        file_name="root/downloads/",
-    )
-    try:
-        response = upload_file(download_location)
-    except Exception as document:
-        await message.reply(message, text=document)
-    else:
-        await message.reply(
-            f"**Hey You...!\nLoook At This\n\n👉 https://telegra.ph{response[0]}**",
-            disable_web_page_preview=True,
-        )
-    finally:
-        os.remove(download_location)
-
-
-
-print("Started Successfully Join Support")
-print("¯\_(ツ)_/¯ Need Help Join @DeCodeSupport")
+print("𝗬𝗼𝘂𝗿 𝗯𝗼𝘁 𝗵𝗮𝘀 𝘀𝘁𝗮𝗿𝘁𝗲𝗱 𝘀𝘂𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆 𝗗𝗿𝗼𝗽 𝘀𝗼𝗺𝗲 𝗻𝘂𝗱𝗲𝘀 𝗼𝗳 𝘂𝗿 𝗚𝗶𝗿𝗹 𝗳𝗿𝗶𝗲𝗻𝗱 𝗶𝗻 𝗼𝘂𝗿 𝘀𝘂𝗽𝗽𝗼𝗿𝘁 𝗰𝗵𝗮𝘁 🌱")
+print("𝗔𝗴𝗮𝗶𝗻 𝗶 𝗮𝗺 𝘀𝗮𝘆𝗶𝗻𝗴 𝗱𝗼𝗻𝘁 𝗳𝗼𝗿𝗴𝗲𝘁 𝘁𝗼 𝗴𝗶𝘃𝗲 𝗰𝗿𝗲𝗱𝗶𝘁𝘀 𝗶𝗳 𝘂 𝗻𝗼𝘁 𝘁𝗲𝗮𝗺 𝗽𝘂𝘁𝘀 𝗮 𝗯𝗿𝗼𝗸𝗲𝗻 𝗯𝗲𝗲𝗿 𝗯𝗼𝘁𝘁𝗹𝗲 𝗶𝗻 𝘂𝗿 𝗮𝘀𝘀𝘀𝘀 🤣")
+print("𝗜𝗳 𝘂 𝗻𝗲𝗲𝗱 𝗵𝗲𝗹𝗽 𝗷𝗼𝗶𝗻 𝘀𝘂𝗽𝗽𝗼𝗿𝘁 𝗰𝗵𝗮𝘁 @AnnexChat 💫")
 client.run_until_disconnected()
