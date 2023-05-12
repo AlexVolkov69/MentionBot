@@ -57,7 +57,7 @@ async def help(event):
 
 #AnnexOp
 
-#Dont forget to give credits i will pok ur girl friends
+#Dont forget to give credits i will pok ur girl friend
 
 #tag
 @client.on(events.NewMessage(pattern="^/tagall|/call|/tall|/all|#all|@all?(.*)"))
@@ -70,7 +70,7 @@ async def mentionall(event):
   async for admin in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
     admins.append(admin.id)
   if not event.sender_id in admins:
-    return await event.respond("Only Admin can use it.")
+    return await event.respond("𝗢𝗻𝗹𝘆 𝗮𝗱𝗺𝗶𝗻 𝗰𝗮𝗻 𝘂𝘀𝗲 𝗶𝘁 😅")
   
   if event.pattern_match.group(1):
     mode = "text_on_cmd"
@@ -79,11 +79,11 @@ async def mentionall(event):
     mode = "text_on_reply"
     msg = event.reply_to_msg_id
     if msg == None:
-        return await event.respond("I can't Mention Members for Old Post!")
+        return await event.respond("𝗜 𝗰𝗮𝗻𝘁 𝗺𝗲𝗻𝘁𝗶𝗼𝗻 𝗺𝗲𝗺𝗯𝗲𝗿𝘀 𝗳𝗼𝗿 𝗼𝗹𝗱 𝗽𝗼𝘀𝘁 🥹")
   elif event.pattern_match.group(1) and event.reply_to_msg_id:
-    return await event.respond("Give me can an Argument. Ex: `/tag Hey, Where are you`")
+    return await event.respond("𝗚𝗶𝘃𝗲 𝗺𝗲 𝗮𝗻 𝗮𝗿𝗴𝘂𝗺𝗲𝗻𝘁 🥂 \n\n 𝐄𝐱𝐚𝐦𝐩𝐥𝐞 :- /tag 𝗛𝗲𝘆, 𝘄𝘁𝗳 𝗮𝗿𝗲 𝘂 𝗱𝗼𝗶𝗻𝗴😂")
   else:
-    return await event.respond("Reply to Message or Give Some Text To Mention!")
+    return await event.respond("𝗥𝗲𝗽𝗹𝘆 𝘁𝗼 𝘁𝗵𝗲 𝗺𝘀𝗴 𝗼𝗿 𝗴𝗶𝘃𝗲 𝘀𝗼𝗺𝗲 𝘁𝗲𝘅𝘁 𝗧𝗼 𝗺𝗲𝗻𝘁𝗶𝗼𝗻 🥀")
     
   if mode == "text_on_cmd":
     moment_worker.append(event.chat_id)
