@@ -85,40 +85,39 @@ async def mentionall(event):
   else:
     return await event.respond("𝗥𝗲𝗽𝗹𝘆 𝘁𝗼 𝘁𝗵𝗲 𝗺𝘀𝗴 𝗼𝗿 𝗴𝗶𝘃𝗲 𝘀𝗼𝗺𝗲 𝘁𝗲𝘅𝘁 𝗧𝗼 𝗺𝗲𝗻𝘁𝗶𝗼𝗻 🥀")
     
-  if mode == "text_on_cmd":
+ if mode == "text_on_cmd":
     moment_worker.append(event.chat_id)
-   usrtxt =""
-   usrnum = 0
-   async for usr in client.iter_participants(event.chat_id):
+    usrnum = 0
+    usrtxt = ""
+    async for usr in client.iter_participants(event.chat_id):
+      usrnum += 1
       usrtxt += f"[{usr.first_name}](tg://user?id={usr.id}) "
-      usrnum += 1 
       if event.chat_id not in moment_worker:
         await event.respond("Stopped!")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, f"{usrtxt}\n\n{msg}")
         await asyncio.sleep(2)
-        usrtxt = ""
         usrnum = 0
-
+        usrtxt = ""
         
   
   if mode == "text_on_reply":
     moment_worker.append(event.chat_id)
  
-    usrtxt = ""
     usrnum = 0
+    usrtxt = ""
     async for usr in client.iter_participants(event.chat_id):
-      usrtxt += f"[{usr.first_name}](tg://user?id={usr.id}) "
       usrnum += 1
+      usrtxt += f"[{usr.first_name}](tg://user?id={usr.id}) "
       if event.chat_id not in moment_worker:
         await event.respond("Stopped")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
         await asyncio.sleep(2)
-        usrtxt = ""
         usrnum = 0
+        usrtxt = ""
 
 
 print("𝗬𝗼𝘂𝗿 𝗯𝗼𝘁 𝗵𝗮𝘀 𝘀𝘁𝗮𝗿𝘁𝗲𝗱 𝘀𝘂𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆 𝗗𝗿𝗼𝗽 𝘀𝗼𝗺𝗲 𝗻𝘂𝗱𝗲𝘀 𝗼𝗳 𝘂𝗿 𝗚𝗶𝗿𝗹 𝗳𝗿𝗶𝗲𝗻𝗱 𝗶𝗻 𝗼𝘂𝗿 𝘀𝘂𝗽𝗽𝗼𝗿𝘁 𝗰𝗵𝗮𝘁 🌱")
