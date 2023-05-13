@@ -85,7 +85,7 @@ async def mentionall(event):
   else:
     return await event.respond("𝗥𝗲𝗽𝗹𝘆 𝘁𝗼 𝘁𝗵𝗲 𝗺𝘀𝗴 𝗼𝗿 𝗴𝗶𝘃𝗲 𝘀𝗼𝗺𝗲 𝘁𝗲𝘅𝘁 𝗧𝗼 𝗺𝗲𝗻𝘁𝗶𝗼𝗻 🥀")
     
-   if mode == "text_on_cmd":
+  if mode == "text_on_cmd":
     moment_worker.append(event.chat_id)
     usrnum = 0
     usrtxt = ""
@@ -102,7 +102,7 @@ async def mentionall(event):
         usrtxt = ""
         
   
-    if mode == "text_on_reply":
+   if mode == "text_on_reply":
     moment_worker.append(event.chat_id)
  
     usrnum = 0
