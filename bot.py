@@ -87,7 +87,7 @@ async def mentionall(event):
     
   if mode == "text_on_cmd":
     moment_worker.append(event.chat_id)
-   usrtxt = ""
+   usrtxt =""
    usrnum = 0
    async for usr in client.iter_participants(event.chat_id):
       usrtxt += f"[{usr.first_name}](tg://user?id={usr.id}) "
